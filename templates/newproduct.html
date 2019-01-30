@@ -1,0 +1,24 @@
+{% extends "main.html" %}
+{% block content %}
+{% include "header.html" %}
+<html>
+
+
+  <body>
+    <h1>New Product: </h1>
+    <form  action="{{url_for('newProduct', brand_id = brand_id)}}" method="post">
+
+      <p>Name: </p>
+      <input type="text" name="name" required >
+      <p>Description: </p>
+      <input type="text" name="description" required>
+      <p>Price:</p>
+      <input type="text" name="price" required >
+      <br><br>
+      <button type="submit"  >Add</button>
+
+    </form>
+  </body>
+</html>
+{% endblock %}
+

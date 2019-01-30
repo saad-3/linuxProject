@@ -1,0 +1,13 @@
+{% extends "main.html" %}
+{% block content %}
+{% include "header.html" %}
+<html>
+  <body>
+    <h1>{{brand.name}}</h1>
+    <h2>{{product.name}}</h2>
+    <h4>description: {{product.description}}</h4>
+    <h4>price: {{product.price}}</h4>
+  </body>
+</html>
+
+{% endblock %}

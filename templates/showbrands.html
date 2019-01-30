@@ -1,0 +1,25 @@
+{% extends "main.html" %}
+{% block content %}
+{% include "header.html" %}
+
+<html>
+<head>
+
+</head>
+  <body>
+    <div><h2>Technology Brands : </h2>
+    </br>
+    {% for x in brands %}
+    <a href="{{url_for('showProducts', brand_id = x.id)}}"><h4>{{x.name}}</h4></a>
+    </br>
+    {% endfor %}
+    </div>
+    <!-- <div class="col-sm-9"> -->
+    <div ><h2>Recently Added Products: </h2>
+    {% for x in products %}
+    <a href="{{url_for('specificProduct' , brand_id = x.brand_id , product_id = x.id)}}"><h4>{{x.name}}</h4></a>
+    {% endfor %}
+    </div>
+  </body>
+</html>
+{% endblock %}

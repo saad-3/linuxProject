@@ -1,0 +1,14 @@
+{% extends "main.html" %}
+{% block content %}
+{% include "header.html" %}
+<html >
+  <body>
+    <h1>Are You Sure You Want To Delete This Product ?</h1>
+    <form action="{{url_for('deleteProduct', brand_id = brand_id , product_id = product_id)}}" method="post">
+      <button type="submit"  >Delete</button>
+      <h4><a href="{{url_for('showProducts', brand_id = brand_id)}}"><span class="label label-primary">Cancel</span></a></h4>
+
+    </form>
+  </body>
+</html>
+{% endblock %}
